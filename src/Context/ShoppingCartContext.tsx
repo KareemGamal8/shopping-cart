@@ -44,6 +44,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProps) {
   const getItemQuantity = (id: number) => {
     return cartItems.find((item: CartItems) => item.id === id)?.quantity || 0;
   };
+  
   const increaseItemsQuantity = (id: number) => {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id) == null) {
